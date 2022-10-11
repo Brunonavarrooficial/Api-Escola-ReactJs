@@ -14,7 +14,7 @@ export default function MyRoute({ component: Component, isClosed, ...rest }) {
         );
     }
     
-    return <Route {...rest} component={Component} />;
+    return <Route { ...rest } component={Component} />;
 }
 
 MyRoute.defaultProps = {
