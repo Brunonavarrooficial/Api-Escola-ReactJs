@@ -5,7 +5,7 @@ import { FaUserCircle, FaEdit, FaWindowClose, FaExclamation } from 'react-icons/
 
 import { Container } from '../../styles/GlobalStyles';
 
-import { AlunoContainer, ProfilePicture } from './styled';
+import { AlunoContainer, ProfilePicture, NovoAluno } from './styled';
 
 import axios from '../../services/axios';
 
@@ -62,6 +62,7 @@ export default function Alunos() {
         <Container>
             <Loading isLoading={isLoading} />
             <h1>Alunos</h1>
+            <NovoAluno to={'/aluno/'}>Novo Aluno</NovoAluno>
             <AlunoContainer>
                 {alunos.map((aluno, index) => (
                     <div key={String(aluno.id)}>
